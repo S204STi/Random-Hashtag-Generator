@@ -9,7 +9,7 @@ body {
 
 .masthead-clearfix {
 	top: 0;
-	width: 100%;
+	/*max-width: 60%;*/
 	text-align: center;
 	height: 120px;
 	padding-top: 1px;
@@ -18,9 +18,8 @@ body {
 }
 
 .mastfoot{
-	position: absolute;
   bottom: -120px;
-  width: 100%;
+	/*max-width: 60%;*/
 	text-align: center;
  	height: 60px;
   line-height: 50px; /* Vertically center the text there */
@@ -40,6 +39,7 @@ button.convert{
 .inner.cover{
 	text-align: center;
 	padding: 5% 5%;
+	/*max-width: 60%;*/
 }
 
 output {

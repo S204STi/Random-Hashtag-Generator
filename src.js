@@ -69,8 +69,7 @@ function convertText(){
 		}
 	}
 
-
-
+//copy to clipboard functionality
 
 
 
