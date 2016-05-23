@@ -1,3 +1,52 @@
+body {
+	background-color: #bdbdbd;
+}
+
 .result{
 	word-wrap: break-word;
+}
+
+.masthead-clearfix {
+	top: 0;
+	width: 100%;
+	text-align: center;
+	height: 110px;
+	padding-top: 1px;
+	background-color: #212121;
+	color: #E0F2F1;
+}
+
+.mastfoot{
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+	text-align: center;
+ 	height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+	background-color: #212121;
+	color: #E0F2F1;
+}
+
+button {
+	background-color: #4CAF50;
+}
+
+.inner.cover{
+	text-align: center;
+	padding: 0 5%;
+}
+
+output {
+	word-wrap: break-word;
+}
+
+.nav-link {
+	border: 2px solid #e0e0e0;
+	border-radius: 4px;
+	background-color: #E0E0E0;
+	padding: 4px 4px;
+}
+
+a {
+	decoration: none;
 }

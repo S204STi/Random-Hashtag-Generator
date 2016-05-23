@@ -7,27 +7,43 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<header class="header">
-		<h2>Hashtag Generator</h2>
-		<p class="header-p">
-			Generate absurdly long hashtags from random text, or from your own input!
-		</p>
-	</header>
+
 	<body>
-		<div class="container-fluid">
-			<output name="result">
-				<!-- need this to wrap around on screen -->
-				#samplehashtagreturnedtouserwhichisridiculouslylongtomakefunofsocialmediauserswhouseridiculouslylonghashtags
-			</output>
+		<div class="site-wrapper">
+			<div class="site-wrapper-inner">
+				<div class="masthead-clearfix">
+					<div class="inner">
+						<h2>Hashtag Generator</h2>
+						<nav class="nav nav-masthead">
+							<a class="nav-link" href="#">About</a>
+							<a class="nav-link" href="#">Contact</a>
+						</nav>
+					</div>
+				</div>
 			<br>
-			<button type="button" name="button">Copy to Clipboard</button>
+			<div class="inner cover">
+				<h2>Generate Random Hashtag</h2>
+				<p class="lead">
+					Have you ever wanted to mock a friend for using a ridiculously long hashtag on social media? Now you can easily generate random gibberish tags of absurd length, just for that purpose!
+				</p>
+				<output name="result">
+					<!-- need this to wrap around on screen -->
+					#samplehashtagreturnedtouserwhichisridiculouslylongtomakefunofsocialmediauserswhouseridiculouslylonghashtags
+				</output>
+				<br>
+				<button type="button" name="button">Copy to Clipboard</button>
+			</div>
+			<div class="mastfoot">
+				<div class="inner">
+					<p class="footer-p">
+					This webpage created by Roy Chase, May 2016
+					</p>
+				</div>
+			</div>
+			</div>
 		</div>
 	</body>
-	<footer class="footer">
-		<p class="footer-p">
-		This webpage created and coded by Roy Chase using Boostrap, and Javascript and/or jQuery, May 2016
-		</p>
-	</footer>
+
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </html>
