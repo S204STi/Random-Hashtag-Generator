@@ -36,20 +36,19 @@ function generateText(err, data){
 		myData = data;
 		//console.log(myData.text_out);
 		var newEl = document.createElement('p');
-		var text = JSON.stringify(data.text_out);
+		var text = data.text_out;
 		console.log('text', text);
 		//because of what the API returns, I need to pull ul and li elements from text
 		var newText = text.toLowerCase().match(/[\w]+/g);
 		console.log('newText', newText);
 		var newStr = '';
-		for (var i = 0; i < newText.length; i++){
-			if(newText[i] !== 'li' && newText[i] !== 'ul' && newText[i] !== "r"){
-				newStr.concat(newText[i]);
-			}
+		var newArr = newText.slice(3,-3);
+		console.log('product of function to remove ul, li, r from text', newArr);
+		//need to concatenate this array into a string
+		for (var i = 0; i < newArr.length; i++){
+			newStr = newStr.concat(newArr[i]);
 		}
-		console.log('product of function to remove ul, li, r from text', newStr);
 		newEl.innerHTML = "#"+newStr;
-
 		console.log(newEl.innerHTML);
 		document.getElementById('result').appendChild(newEl);
 		bool = false;
