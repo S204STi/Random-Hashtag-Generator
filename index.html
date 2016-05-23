@@ -15,6 +15,7 @@
 				<div class="masthead-clearfix">
 					<div class="inner">
 						<h2>Hashtag Generator</h2>
+						<br>
 						<nav class="nav nav-masthead">
 							<a class="nav-link" href="#">About</a>
 							<a class="nav-link" href="#">Contact</a>
@@ -23,22 +24,27 @@
 				</div>
 			<br>
 			<div class="inner cover">
-				<h2>Generate Random Hashtag</h2>
+				<h2>Generate Random Hashtags</h2>
 				<p class="lead">
 					Have you ever wanted to mock a friend for using a ridiculously long hashtag on social media? Now you can easily generate random gibberish tags of absurd length, just for that purpose!
 				</p>
+				<button type="button create" name="button">Generate!</button>
 				<output name="result">
 					<!-- need this to wrap around on screen -->
-					#samplehashtagreturnedtouserwhichisridiculouslylongtomakefunofsocialmediauserswhouseridiculouslylonghashtags
+					<p>
+						#samplehashtagreturnedtouserwhichisridiculouslylongtomakefunofsocialmediauserswhouseridiculouslylonghashtags
+					</p>
 				</output>
 				<br>
-				<button type="button" name="button">Copy to Clipboard</button>
+				<button type="button copy" name="button">Copy to Clipboard</button>
 			</div>
 			<div class="inner cover">
 				<h2>Or Create Your Own</h2>
 				<input type="text" name="name" value="">
+				<br>
+				<button type="button convert" name="button">Convert!</button>
 				<output name="result">#samplehashtagreturnedtouserwhichisridiculouslylongtomakefunofsocialmediauserswhouseridiculouslylonghashtags</output>
-				<button type="button" name="button">Copy to Clipboard</button>
+				<button type="button copy" name="button">Copy to Clipboard</button>
 			</div>
 			<div class="mastfoot">
 				<div class="inner">
@@ -53,4 +59,5 @@
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="src.js" ></script>
 </html>
