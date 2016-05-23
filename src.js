@@ -22,21 +22,36 @@ function ajax(method, url, handler, data) {
   }
 }
 
-ajax('GET', 'http://www.randomtext.me/api/gibberish/ul-1/20-25', generateText);
-var myData;
-
-
-function generateText(err, data){
-	console.log(data.text_out);
-	myData = data;
-	console.log(myData.text_out);
-	var newText = document.createElement('p');
-	newText.innerHTML = data.text_out;
-	console.log(newText.innerHTML);
-	document.getElementsByClassName('result').appendChild(newText);
-}
-
-document.getElementsByClassName('create').addEventListener('click', function(event){
-		//console.log(event.target.text_out);
-		event.target.innerHTML = myData.text_out;
+//ajax call -----
+document.getElementById('create').addEventListener('click', function(){
+	ajax('GET', 'http://www.randomtext.me/api/gibberish/ul-1/20-25', generateText);
 });
+//---------------
+
+var bool = true;//I only want the user to be able to run this once
+var myData;
+function generateText(err, data){
+	if(bool){
+		//console.log(data.text_out);
+		myData = data;
+		//console.log(myData.text_out);
+		var newEl = document.createElement('p');
+		var text = JSON.stringify(data.text_out);
+		console.log('text', text);
+		//because of what the API returns, I need to pull ul and li elements from text
+		var newText = text.toLowerCase().match(/[\w]+/g);
+		console.log('newText', newText);
+		var newStr = '';
+		for (var i = 0; i < newText.length; i++){
+			if(newText[i] !== 'li' && newText[i] !== 'ul' && newText[i] !== "r"){
+				newStr.concat(newText[i]);
+			}
+		}
+		console.log('product of function to remove ul, li, r from text', newStr);
+		newEl.innerHTML = "#"+newStr;
+
+		console.log(newEl.innerHTML);
+		document.getElementById('result').appendChild(newEl);
+		bool = false;
+	}
+}
