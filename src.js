@@ -30,6 +30,7 @@ document.getElementById('create').addEventListener('click', function(){
 
 var bool = true;//I only want the user to be able to run this once
 var myData;
+var randEl;
 function generateText(err, data){
 	if(bool){
 		myData = data;
@@ -45,10 +46,22 @@ function generateText(err, data){
 		}
 		newEl.innerHTML = "#"+newStr;
 		document.getElementById('result').appendChild(newEl);
+		randEl = newEl.innerHTML;
 		bool = false;
 	}
 }
+//copy to clipboard functionality
+//on click to copy data
 
+var randomCopy = document.getElementById('randCopy');
+
+randomCopy.addEventListener('copy', function(e){
+	e.clipboard.setData('text/plain', randEl);
+	e.preventDefault();
+	window.Alert('Copied!');
+});
+
+var myData = randomCopy.clipboardData;
 
 //convert user-provided string to a useable string for the purposes of this website
 document.getElementById('convert').addEventListener('click', convertText);
@@ -64,13 +77,17 @@ function convertText(){
 				newStr = newStr.concat(newText[i]);
 			}
 			newEl.innerHTML = "#"+newStr;
+			console.log('newEl.innerHTML', newEl.innerHTML);
 			document.getElementById('userResult').appendChild(newEl);
 			otherBool=false;
 		}
 	}
 
-//copy to clipboard functionality
-
+//document.addEventListener('copy', function(e){
+//     e.clipboardData.setData('text/plain', 'Hello, world!');
+//     e.clipboardData.setData('text/html', '<b>Hello, world!</b>');
+//     e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+// });
 
 
 
