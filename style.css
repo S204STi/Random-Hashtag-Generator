@@ -21,6 +21,7 @@ body {
 .footer {
   position: fixed;
   bottom: 0;
+	left: 0%;
   /* Set the fixed height of the footer here */
   height: 60px;
 	line-height: 60px;
@@ -35,7 +36,9 @@ body {
 button {
 	background-color: #00BFA5;
 }
-
+#convCopy{
+	margin-bottom: 80px;
+}
 button.create,
 button.convert{
 	background-color: #1B5E20;
