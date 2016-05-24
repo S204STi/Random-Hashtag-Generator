@@ -17,14 +17,19 @@ body {
 	color: #E0F2F1;
 }
 
-.mastfoot{
-  bottom: -120px;
-	/*max-width: 60%;*/
-	text-align: center;
- 	height: 60px;
-  line-height: 50px; /* Vertically center the text there */
-	background-color: #212121;
-	color: #E0F2F1;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+	line-height: 60px;
+  background-color: #212121;
+}
+
+
+.site-wrapper{
+	overflow: scroll;
 }
 
 button {
@@ -38,7 +43,7 @@ button.convert{
 
 .inner.cover{
 	text-align: center;
-	padding: 5% 5%;
+	padding: 5% 10% 0 10%;
 	/*max-width: 60%;*/
 }
 
@@ -55,14 +60,15 @@ a {
 	padding: 0 4px;
 }
 
-a.hover,
-a.focus {
+.hover,
+.focus {
 	color: #ffffff;
 }
 
-#aboutarticle {
-	overflow: hidden;
-	top: -100px;
+.slideMenu {
+	z-index: 5;
+	padding: 0 10%;
+	text-align: center;
 }
 
 li {

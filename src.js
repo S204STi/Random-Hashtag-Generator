@@ -92,11 +92,8 @@ function copyUserToClipboard(){
 document.getElementById('nav-link-a').addEventListener('click', showAbout);
 
 function showAbout(){
-	var newArticle = document.getElementById('aboutarticle');
-	newArticle.style.textAlign = 'center';
-	newArticle.style.padding = "5% 5%";
-
-	document.getElementsByClassName('site-wrapper-inner').appendChild(newArticle);
+	var aboutArticle = document.getElementById('slideMenu');
+  aboutArticle.class = "col-xs-12 col-sm-12 col-md-9 col-lg-9";
 }
 
 

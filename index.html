@@ -11,19 +11,24 @@
 
 	<body>
 		<div class="site-wrapper">
-			<div class="site-wrapper-inner">
+			<div class="site-wrapper-inner col-xs-12 col-sm-12 col-md-9 col-lg-9">
 				<div class="masthead-clearfix">
 					<div class="inner">
 						<h2>Hashtag Generator</h2>
 						<br>
 						<nav class="nav nav-masthead">
-							<a id="nav-link-a" class="nav-link" href="https://personalwebpage.firebaseapp.com/index.html">About</a>
+							<a id="nav-link-a" class="nav-link" href="#">About</a>
 							<a id="nav-link-c" class="nav-link" href="mailto:rechase84@gmail.com">Contact</a>
 						</nav>
 					</div>
 				</div>
 			<br>
-			<div class="inner cover">
+			<div class="inner cover col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<article id="slideMenu" class="slideMenu hidden-xs hidden-sm hidden-md hidden-lg">
+					<p>
+						<img src="myuglymug.jpg" alt="" />
+					</p>
+				</article>
 				<h2>Generate Random Hashtags</h2>
 				<p class="lead">
 					Have you ever wanted to mock a friend for using a ridiculously long hashtag on social media? Now you can easily generate random gibberish tags of absurd length, just for that purpose!
@@ -32,26 +37,24 @@
 				<output id="result" name="result">
 					<!-- random text will go here -->
 				</output>
-				<br>
 				<button id="randCopy" type="button copy" name="button">Copy to Clipboard</button>
 			</div>
-			<div class="inner cover">
+			<div class="inner cover inner cover col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<h2>Or Create Your Own</h2>
 				<input id="input" type="text" name="name" value="">
-				<br>
 				<button id="convert" type="button" name="button">Convert!</button>
 				<output id="userResult"  name="result">
 					<!-- converted user string goes here -->
 				</output>
 				<button id="convCopy" type="button copy" name="button">Copy to Clipboard</button>
 			</div>
-			<div class="mastfoot">
+			<footer class="footer col-xs-12 col-sm-12 col-md-9 col-lg-9">
 				<div class="inner">
 					<p class="footer-p">
 					This webpage created by Roy Chase, May 2016
 					</p>
 				</div>
-			</div>
+			</footer>
 			</div>
 		</div>
 	</body>
