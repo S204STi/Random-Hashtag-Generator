@@ -30,7 +30,7 @@ document.getElementById('create').addEventListener('click', function(){
 
 var bool = true;//I only want the user to be able to run this once
 var myData;
-var randEl;
+var randEl = '';
 function generateText(err, data){
 	if(bool){
 		myData = data;
@@ -40,28 +40,31 @@ function generateText(err, data){
 		var newText = text.toLowerCase().match(/[\w]+/g);
 		var newStr = '';
 		var newArr = newText.slice(3,-3);
-		//need to concatenate this array into a string
-		for (var i = 0; i < newArr.length; i++){
-			newStr = newStr.concat(newArr[i]);
-		}
-		newEl.innerHTML = "#"+newStr;
+		//need to concatenate this array into a string preceeding each word with a "#"
+			for (var i = 0; i < newArr.length; i++){
+				newStr = newStr.concat("#"+newArr[i]);
+			}
+		newEl.innerHTML = newStr;
 		document.getElementById('result').appendChild(newEl);
 		randEl = newEl.innerHTML;
+		console.log('randEl', randEl);
+		// newEl.getElementsByTagName('p').addEventListener('click', randomCopy);
+		console.log('newEl elements', newEl);
 		bool = false;
 	}
 }
 //copy to clipboard functionality
 //on click to copy data
+document.getElementById('randCopy').addEventListener('click', randomCopy);
 
-var randomCopy = document.getElementById('randCopy');
-
-randomCopy.addEventListener('copy', function(e){
-	e.clipboard.setData('text/plain', randEl);
-	e.preventDefault();
-	window.Alert('Copied!');
-});
-
-var myData = randomCopy.clipboardData;
+function randomCopy(event){
+	console.log('entering randomCopy function');
+	event.clipboardData.setData('text/plain', randEl);
+	console.log('randEl', randEl);
+	event.preventDefault();
+	window.alert('Copied');
+	console.log('successfully fire copy event');
+}
 
 //convert user-provided string to a useable string for the purposes of this website
 document.getElementById('convert').addEventListener('click', convertText);
