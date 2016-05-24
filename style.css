@@ -59,3 +59,12 @@ a.hover,
 a.focus {
 	color: #ffffff;
 }
+
+#aboutarticle {
+	overflow: hidden;
+	top: -100px;
+}
+
+li {
+	list-style-type: none;
+}
