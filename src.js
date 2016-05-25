@@ -28,7 +28,7 @@ document.getElementById('create').addEventListener('click', function(){
 });
 //---------------
 document.getElementById('bacon').addEventListener('click', function(){
-  ajax('GET', 'https://baconipsum.com/api/?type=all-meat?sentences=2', generateBacon);
+  ajax('GET', 'https://baconipsum.com/api/?type=all-meat&sentences=2', generateBacon);
 });
 //for future use--
 // https://baconipsum.com/api/?type=meat-and-filler
