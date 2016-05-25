@@ -83,6 +83,7 @@ function generateBacon(err, data){
     console.log('newBacon',newBacon);
     document.getElementById('baconResult').appendChild(newBacon);
     baconEl = newBacon.innerHTML;
+    bacon = false;
   }
 }
 
