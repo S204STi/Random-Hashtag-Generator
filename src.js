@@ -48,7 +48,7 @@ function generateText(err, data){
 		var newArr = newText.slice(3,-3);
 		//need to concatenate this array into a string, preceeding each word with a "#"
 			for (var i = 0; i < newArr.length; i++){
-				newStr = newStr.concat("#"+newArr[i]);
+				newStr = newStr.concat("#"+newArr[i] + " ");
 			}
 		newEl.innerHTML = newStr;
 		document.getElementById('result').appendChild(newEl);
@@ -77,7 +77,7 @@ function generateBacon(err, data){
     baconText = baconText.toLowerCase().match(/[\w]+/g);
     var baconStr ='';
     for (var i = 0; i < baconText.length; i++){
-      baconStr = baconStr.concat("#" + baconText[i]);
+      baconStr = baconStr.concat("#" + baconText[i] + " ");
     }
     newBacon.innerHTML = baconStr;
     console.log('newBacon',newBacon);
@@ -107,7 +107,7 @@ function convertText(){
 			var newText = text.toLowerCase().match(/[\w]+/g);
 			var newStr = '';
 			for (var i = 0; i < newText.length; i++){
-				newStr = newStr.concat("#" + newText[i]);
+				newStr = newStr.concat("#" + newText[i] + " ");
 			}
 			newEl.innerHTML = newStr;
 			userEl = newEl.innerHTML;
