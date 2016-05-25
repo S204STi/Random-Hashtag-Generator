@@ -10,43 +10,53 @@
 	</head>
 
 	<body>
-		<div class="site-wrapper">
-			<header class="masthead-clearfix col-xs-12 col-sm-12 col-md-9 col-lg-9 text-center">
-				<div class="inner">
-					<h2>Hashtag Generator</h2>
-					<br>
-					<nav class="nav nav-masthead">
-						<a id="nav-link-a" class="nav-link" href="#">About</a>
-						<a id="nav-link-c" class="nav-link" href="mailto:rechase84@gmail.com">Contact</a>
-					</nav>
+		<div class="site-wrapper ">
+			<header class="masthead-clearfix col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+				<p class="hidden-xs col-sm-3 col-md-6 col-lg-6 text-left">
+					Random Hastag Generator
+				</p>
+				<p id="extraSmallHeadline" class="col-xs-6 hidden-sm hidden-md hidden-lg text-left">
+					Random Hastag Generator
+				</p>
+				<p class="hidden-xs col-sm-3 col-md-3 col-lg-3">
+
+				</p>
+				<p class="hidden-xs col-sm-3 hidden-md hidden-lg">
+
+				</p>
+				<div class="btn-group btn-btn-group-md col-xs-6 col-sm-3 col-md-3 col-lg-3" role="group">
+  				<button type="button" id="nav-link-a" class="btn btn-default">About</button>
+  				<button type="button" id="nav-link-c" class="btn btn-default"><a href="mailto:rechase84@gmail.com">Contact</a></button>
 				</div>
 			</header>
-			<div class="site-wrapper-inner col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<div class="site-wrapper-inner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<!-- this is normally hidden until toggled using JS -->
 				<div id="hidden" class="inner cover hidden-xs hidden-sm hidden-md hidden-lg">
-					<img src="myuglymug.jpg" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"/><br><caption>S204STi in the wild, Victoria, BC</caption>
+					<img src="myuglymug.jpg" class="col-xs-12 col-sm-12 col-md-6 col-lg-6"/><figcaption class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">S204STi in the wild, Victoria, BC</figcaption>
 					<p>
-						This is an early project of mine from my time in Galvanize, a webdev bootcamp. The inspiration for it was seeing friends on social media using insanely long chains of hashtags on nearly every post, and wanting to have a quick and easy way to mock them into a state of deep depression. This website was built using primarily HTML and JS, with some Bootstrap implementation. The API I'm using to generate the random text is <a href="http://www.randomtext.me/">Randomtext.me</a>, to whom I am deeply grateful. Check out their stuff for your own projects. -S20
+						This is an early project of mine from my time in Galvanize, a webdev bootcamp. The inspiration for it was seeing friends on social media using insanely long chains of hashtags on nearly every post, and wanting to have a quick and easy way to mock them into a state of deep depression. This website was built using primarily HTML and JS, with some Bootstrap implementation. The API I'm using to generate the random text is <a target="_blank" href="http://www.randomtext.me/">Randomtext.me</a>, to whom I am deeply grateful. Check out their stuff for your own projects. -S20
 					</p>
 				</div>
-			<div class="inner cover hidden-xs hidden-sm col-md-12 col-lg-12">
+				<!-- end of hidden elements -->
+			<div class="inner cover hidden-xs col-sm-12 col-md-12 col-lg-12 text-center">
 				<p class="lead">
 					Have you ever wanted to mock a friend for using a ridiculously long hashtag chain on social media? Now you can easily generate random gibberish tag chains of absurd length, just for that purpose!
 				</p>
 			</div>
-			<div class="inner cover col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<div class="inner cover col-xs-12 col-sm-6 col-md-6 col-lg-6">
 				<article id="slideMenu" class="slideMenu hidden-xs hidden-sm hidden-md hidden-lg">
 					<p>
 						<img src="myuglymug.jpg" alt="" />
 					</p>
 				</article>
 				<h2>Generate Random Hashtags</h2>
-				<button id="create" type="button" name="button">Generate!</button>
+				<button class="btn-btn-standard" id="create" type="button" name="button">Generate!</button>
 				<output id="result" name="result">
 					<!-- random text will go here -->
 				</output>
 				<button id="randCopy" type="button copy" name="button">Copy to Clipboard</button>
 			</div>
-			<div class="inner cover inner cover col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<div class="inner cover inner cover col-xs-12 col-sm-6 col-md-6 col-lg-6">
 				<h2>Or Create Your Own</h2>
 				<input id="input" type="text" name="name" value="">
 				<button id="convert" type="button" name="button">Convert!</button>
@@ -55,7 +65,7 @@
 				</output>
 				<button id="convCopy" type="button copy" name="button">Copy to Clipboard</button>
 			</div>
-			<footer class="footer col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<footer class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="inner">
 					<p class="footer-p">
 					This webpage created by Roy Chase, May 2016

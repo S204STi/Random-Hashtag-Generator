@@ -7,16 +7,25 @@ body {
 	word-wrap: break-word;
 }
 
+#extraSmallHeadline{
+	font-size: 12px;
+}
+
 .masthead-clearfix {
+	position: fixed;
 	top: 0;
 	/*max-width: 60%;*/
 	/*text-align: center;*/
-	height: 120px;
-	padding-top: 1px;
+	height: 60px;
+	line-height: 60px;
+	/*padding-top: 1px;*/
 	background-color: #212121;
 	color: #E0F2F1;
 }
 
+.btn-group{
+	margin-top: 14px;
+}
 
 .footer {
   position: fixed;
@@ -28,9 +37,16 @@ body {
   background-color: #212121;
 }
 
+.lead{
+	font-size: 20px;
+	margin: 0 60px 0 60px;
+}
 
 .site-wrapper{
 	overflow: scroll;
+}
+.site-wrapper-inner {
+	margin-top: 80px;
 }
 
 button {
@@ -50,6 +66,9 @@ button.convert{
 	/*max-width: 60%;*/
 }
 
+figcaption{
+	font-size: 8px;
+}
 output {
 	word-wrap: break-word;
 }
@@ -57,22 +76,10 @@ output {
 a {
 	text-decoration: none;
 	color: black;
-	border: 2px solid #e0e0e0;
 	border-radius: 4px;
-	background-color: #E0E0E0;
 	padding: 0 4px;
 }
 
-.hover,
-.focus {
-	color: #ffffff;
-}
-
-.slideMenu {
-	z-index: 5;
-	padding: 0 10%;
-	text-align: center;
-}
 
 li {
 	list-style-type: none;
