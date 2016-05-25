@@ -12,17 +12,17 @@
 	<body>
 		<div class="site-wrapper ">
 			<header class="masthead-clearfix col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-				<p class="hidden-xs col-sm-3 col-md-6 col-lg-6 text-left">
+				<h3 id="headline" class="hidden-xs col-sm-3 col-md-6 col-lg-6 text-center">
 					Random Hastag Generator
-				</p>
+				</h3>
 				<p id="extraSmallHeadline" class="col-xs-6 hidden-sm hidden-md hidden-lg text-left">
 					Random Hastag Generator
 				</p>
 				<p class="hidden-xs col-sm-3 col-md-3 col-lg-3">
-
+					<!-- hidden, for bootstrap grid -->
 				</p>
 				<p class="hidden-xs col-sm-3 hidden-md hidden-lg">
-
+					<!-- hidden, for bootstrap grid -->
 				</p>
 				<div class="btn-group btn-btn-group-md col-xs-6 col-sm-3 col-md-3 col-lg-3" role="group">
   				<button type="button" id="nav-link-a" class="btn btn-default">About</button>
@@ -32,7 +32,7 @@
 			<div class="site-wrapper-inner col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<!-- this is normally hidden until toggled using JS -->
 				<div id="hidden" class="inner cover hidden-xs hidden-sm hidden-md hidden-lg">
-					<img src="myuglymug.jpg" class="col-xs-12 col-sm-12 col-md-6 col-lg-6"/><figcaption class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">S204STi in the wild, Victoria, BC</figcaption>
+					<img src="myuglymug.jpg" class="col-xs-12 col-sm-12 col-md-6 col-lg-6"/><figcaption class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">S204STi in the wild - Victoria, BC</figcaption>
 					<p>
 						This is an early project of mine from my time in Galvanize, a webdev bootcamp. The inspiration for it was seeing friends on social media using insanely long chains of hashtags on nearly every post, and wanting to have a quick and easy way to mock them into a state of deep depression. This website was built using primarily HTML and JS, with some Bootstrap implementation. The API I'm using to generate the random text is <a target="_blank" href="http://www.randomtext.me/">Randomtext.me</a>, to whom I am deeply grateful. Check out their stuff for your own projects. -S20
 					</p>
@@ -43,12 +43,7 @@
 					Have you ever wanted to mock a friend for using a ridiculously long hashtag chain on social media? Now you can easily generate random gibberish tag chains of absurd length, just for that purpose!
 				</p>
 			</div>
-			<div class="inner cover col-xs-12 col-sm-6 col-md-6 col-lg-6">
-				<article id="slideMenu" class="slideMenu hidden-xs hidden-sm hidden-md hidden-lg">
-					<p>
-						<img src="myuglymug.jpg" alt="" />
-					</p>
-				</article>
+			<div class="inner cover col-xs-12 col-sm-4 col-md-4 col-lg-4">
 				<h2>Generate Random Hashtags</h2>
 				<button class="btn-btn-standard" id="create" type="button" name="button">Generate!</button>
 				<output id="result" name="result">
@@ -56,7 +51,15 @@
 				</output>
 				<button id="randCopy" type="button copy" name="button">Copy to Clipboard</button>
 			</div>
-			<div class="inner cover inner cover col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<div class="inner cover col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<h2>Meat-Themed Hashtags!</h2>
+				<button class="btn-btn-standard" id="bacon" type="button" name="button">Moar Meat</button>
+				<output id="baconResult" name="result">
+					<!-- random bacon text will go here -->
+				</output>
+				<button id="baconCopy" type="button copy" name="button">Copy to Clipboard</button>
+			</div>
+			<div class="inner cover inner cover col-xs-12 col-sm-4 col-md-4 col-lg-4">
 				<h2>Or Create Your Own</h2>
 				<input id="input" type="text" name="name" value="">
 				<button id="convert" type="button" name="button">Convert!</button>
@@ -75,7 +78,7 @@
 			</div>
 		</div>
 	</body>
-
+	<!-- jQuery not required for this project -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="src.js" ></script>

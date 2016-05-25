@@ -27,6 +27,12 @@ document.getElementById('create').addEventListener('click', function(){
 	ajax('GET', 'http://www.randomtext.me/api/gibberish/ul-1/25-30', generateText);
 });
 //---------------
+document.getElementById('bacon').addEventListener('click', function(){
+  ajax('GET', 'https://baconipsum.com/api/?type=all-meat?sentences=2', generateBacon);
+});
+//for future use--
+// https://baconipsum.com/api/?type=meat-and-filler
+//----------------
 
 var bool = true;//I only want the user to be able to run this once
 var myData;
@@ -57,6 +63,36 @@ document.getElementById('randCopy').addEventListener('click', copyToClipboard);
 function copyToClipboard() {
   window.prompt("Copy to clipboard: Ctrl+C/Cmd+C, Enter", randEl);
 }
+
+
+var bacon = true;
+var baconData;
+var baconEl = '';
+function generateBacon(err, data){
+  if(bacon){
+    baconData = data[0];
+    var newBacon = document.createElement('p');
+    var baconText = baconData;
+    console.log('baconText', baconText);
+    baconText = baconText.toLowerCase().match(/[\w]+/g);
+    var baconStr ='';
+    for (var i = 0; i < baconText.length; i++){
+      baconStr = baconStr.concat("#" + baconText[i]);
+    }
+    newBacon.innerHTML = baconStr;
+    console.log('newBacon',newBacon);
+    document.getElementById('baconResult').appendChild(newBacon);
+    baconEl = newBacon.innerHTML;
+  }
+}
+
+document.getElementById('baconCopy').addEventListener('click', copyBaconToClipboard);
+
+function copyBaconToClipboard() {
+  window.prompt("Copy to clipboard: Ctrl+C/Cmd+C, Enter", baconEl);
+}
+
+//--------
 
 
 
