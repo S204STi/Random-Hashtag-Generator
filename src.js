@@ -24,14 +24,12 @@ function ajax(method, url, handler, data) {
 
 //ajax call -----
 document.getElementById('create').addEventListener('click', function(){
-	ajax('GET', 'http://www.randomtext.me/api/gibberish/ul-1/25-30', generateText);
+	ajax('GET', 'https://www.randomtext.me/api/gibberish/ul-1/25-30', generateText);
 });
-//---------------
+//baconipsum AJAX call
 document.getElementById('bacon').addEventListener('click', function(){
   ajax('GET', 'https://baconipsum.com/api/?type=all-meat&sentences=2', generateBacon);
 });
-//for future use--
-// https://baconipsum.com/api/?type=meat-and-filler
 //----------------
 
 var bool = true;//I only want the user to be able to run this once
