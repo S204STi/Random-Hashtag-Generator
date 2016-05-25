@@ -90,12 +90,21 @@ function copyUserToClipboard(){
 
 //---code for showing hidden div elements ------
 document.getElementById('nav-link-a').addEventListener('click', showAbout);
+var anotherBool = true;
 
 function showAbout(){
-	var aboutArticle = document.getElementById('slideMenu');
-  aboutArticle.class = "col-xs-12 col-sm-12 col-md-9 col-lg-9";
+  if(anotherBool){
+    document.getElementById('hidden').className = "inner cover col-xs-12 col-sm-12 col-md-12 col-lg-12";
+    anotherBool = false;
+  } else {
+    hideAbout();
+    anotherBool = true;
+  }
 }
 
+function hideAbout(){
+    document.getElementById('hidden').className = "inner cover hidden-xs hidden-sm hidden-md hidden-lg";
+}
 
 
 
