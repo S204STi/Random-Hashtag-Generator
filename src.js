@@ -39,6 +39,7 @@ function generateText(err, data){
 	if(bool){
 		myData = data;
 		var newEl = document.createElement('p');
+    newEl.style.color = '#E0E0E0';
 		var text = data.text_out;
 		//because of what the API returns, I need to pull ul and li elements from text
 		var newText = text.toLowerCase().match(/[\w]+/g);
@@ -70,6 +71,7 @@ function generateBacon(err, data){
   if(bacon){
     baconData = data[0];
     var newBacon = document.createElement('p');
+    newBacon.style.color = '#E0E0E0';
     var baconText = baconData;
     console.log('baconText', baconText);
     baconText = baconText.toLowerCase().match(/[\w]+/g);
@@ -102,6 +104,7 @@ var otherBool = true;
 function convertText(){
 	if(otherBool){
 			var newEl = document.createElement('p');
+      newEl.style.color = '#E0E0E0';
 			var text = document.getElementById('input').value;
 			var newText = text.toLowerCase().match(/[\w]+/g);
 			var newStr = '';

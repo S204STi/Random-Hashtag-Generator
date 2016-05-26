@@ -1,6 +1,7 @@
 body {
-	background-color: #bdbdbd;
+	background-image: url("blackboard.jpg");
 	font-family: 'Oswald', sans-serif;
+	color: #EEE9E9;
 }
 
 .result{
@@ -40,14 +41,15 @@ body {
 
 
 .site-wrapper{
-	overflow: scroll;
+	overflow: hidden;
 }
+
 .site-wrapper-inner {
 	margin-top: 80px;
 }
 
 button {
-	background-color: #00BFA5;
+	background-color: #2E7D32;
 }
 #convCopy{
 	margin-bottom: 80px;
@@ -75,6 +77,10 @@ a {
 	color: black;
 	border-radius: 4px;
 	padding: 0 4px;
+
+
+h2 {
+	color: #B2DFDB;
 }
 
 
