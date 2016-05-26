@@ -103,8 +103,6 @@ function copyBaconToClipboard() {
 
 //--------
 
-
-
 //convert user-provided string to a useable string for the purposes of this website
 document.getElementById('convert').addEventListener('click', convertText);
 var userEl ='';
