@@ -40,6 +40,7 @@ function generateText(err, data){
 		myData = data;
 		var newEl = document.createElement('p');
     newEl.style.color = '#E0E0E0';
+    newEl.style.fontSize = "24px";
 		var text = data.text_out;
 		//because of what the API returns, I need to pull ul and li elements from text
 		var newText = text.toLowerCase().match(/[\w]+/g);
@@ -72,6 +73,7 @@ function generateBacon(err, data){
     baconData = data[0];
     var newBacon = document.createElement('p');
     newBacon.style.color = '#E0E0E0';
+    newBacon.style.fontSize = "24px";
     var baconText = baconData;
     console.log('baconText', baconText);
     baconText = baconText.toLowerCase().match(/[\w]+/g);
@@ -105,6 +107,7 @@ function convertText(){
 	if(otherBool){
 			var newEl = document.createElement('p');
       newEl.style.color = '#E0E0E0';
+      newEl.style.fontSize = "24px";
 			var text = document.getElementById('input').value;
 			var newText = text.toLowerCase().match(/[\w]+/g);
 			var newStr = '';
@@ -126,26 +129,51 @@ function copyUserToClipboard(){
 }
 
 
-//---code for showing hidden div elements ------
+//---code for showing "about" elements ------
 document.getElementById('nav-link-a').addEventListener('click', showAbout);
-var anotherBool = true;
 
+var anotherBool = true;
 function showAbout(){
-  if(anotherBool){
-    document.getElementById('hidden').className = "inner cover col-xs-12 col-sm-12 col-md-12 col-lg-12";
+  if(showAbout){
+    if(hideContact){//hide about elements when switching to about elements
+      hideContact();
+    }
+    document.getElementById('hiddenA').className = "inner cover col-xs-12 col-sm-12 col-md-12 col-lg-12";
     anotherBool = false;
   } else {
     hideAbout();
     anotherBool = true;
+    contactBool = true;
   }
 }
 
 function hideAbout(){
-    document.getElementById('hidden').className = "inner cover hidden-xs hidden-sm hidden-md hidden-lg";
+    document.getElementById('hiddenA').className = "inner cover hidden-xs hidden-sm hidden-md hidden-lg";
+}
+//------end of about elements ------------------
+
+//---code for showing and hiding contact menu---
+document.getElementById('nav-link-c').addEventListener('click', showContact);
+
+var contactBool = true;
+function showContact(){
+  if(contactBool){
+    if(hideAbout){//hide the about elements when transitioning to contact elements
+      hideAbout();
+    }
+    document.getElementById('hiddenC').className = "inner cover col-xs-12 col-sm-12 col-md-12 col-lg-12";
+    contactBool = false;
+  } else {
+    hideContact();
+    anotherBool = true;
+    contactBool = true;
+  }
 }
 
+function hideContact(){
+  document.getElementById('hiddenC').className = "inner cover hidden-xs hidden-sm hidden-md hidden-lg";
+}
 
-
-
+///--end contact menu----------------------
 
 //

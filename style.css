@@ -39,6 +39,10 @@ body {
   background-color: #212121;
 }
 
+.footer-p {
+	font-size: 16px;
+	color: #616161;
+}
 
 .site-wrapper{
 	overflow: hidden;
@@ -77,12 +81,11 @@ a {
 	color: black;
 	border-radius: 4px;
 	padding: 0 4px;
-
-
-h2 {
-	color: #B2DFDB;
 }
 
+p{
+	font-size: 18px;
+}
 
 li {
 	list-style-type: none;
