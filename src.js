@@ -134,8 +134,8 @@ document.getElementById('nav-link-a').addEventListener('click', showAbout);
 
 var anotherBool = true;
 function showAbout(){
-  if(showAbout){
-    if(hideContact){//hide about elements when switching to about elements
+  if(anotherBool){
+    if(!contactBool){//hide about elements when switching to about elements
       hideContact();
     }
     document.getElementById('hiddenA').className = "inner cover col-xs-12 col-sm-12 col-md-12 col-lg-12";
@@ -158,7 +158,7 @@ document.getElementById('nav-link-c').addEventListener('click', showContact);
 var contactBool = true;
 function showContact(){
   if(contactBool){
-    if(hideAbout){//hide the about elements when transitioning to contact elements
+    if(!anotherBool){//hide the about elements when transitioning to contact elements
       hideAbout();
     }
     document.getElementById('hiddenC').className = "inner cover col-xs-12 col-sm-12 col-md-12 col-lg-12";

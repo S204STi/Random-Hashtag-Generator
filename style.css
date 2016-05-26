@@ -12,6 +12,14 @@ body {
 	font-size: 12px;
 }
 
+#mail, #linkedIn{
+	background-color: black;
+	color: white;
+	font-size: 36px;
+}
+
+
+
 .masthead-clearfix {
 	position: fixed;
 	top: 0;
