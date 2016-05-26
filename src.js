@@ -44,12 +44,16 @@ function generateText(err, data){
 		var text = data.text_out;
 		//because of what the API returns, I need to pull ul and li elements from text
 		var newText = text.toLowerCase().match(/[\w]+/g);
+    console.log(newText);
 		var newStr = '';
 		var newArr = newText.slice(3,-3);
 		//need to concatenate this array into a string, preceeding each word with a "#"
 			for (var i = 0; i < newArr.length; i++){
-				newStr = newStr.concat("#"+newArr[i] + " ");
-			}
+        if(newArr[i].length > 5){//this cuts out filler words and anything that isn't interesting
+          newStr = newStr.concat("#"+newArr[i] + " ");
+        }
+      }
+
 		newEl.innerHTML = newStr;
 		document.getElementById('result').appendChild(newEl);
 		randEl = newEl.innerHTML;
@@ -79,7 +83,9 @@ function generateBacon(err, data){
     baconText = baconText.toLowerCase().match(/[\w]+/g);
     var baconStr ='';
     for (var i = 0; i < baconText.length; i++){
+      if (baconText[i].length > 3){//cuts out the "-tip" words which my regex can't handle
       baconStr = baconStr.concat("#" + baconText[i] + " ");
+      }
     }
     newBacon.innerHTML = baconStr;
     console.log('newBacon',newBacon);
@@ -134,16 +140,13 @@ document.getElementById('nav-link-a').addEventListener('click', showAbout);
 
 var anotherBool = true;
 function showAbout(){
+  hideContact();
   if(anotherBool){
-    if(!contactBool){//hide about elements when switching to about elements
-      hideContact();
-    }
     document.getElementById('hiddenA').className = "inner cover col-xs-12 col-sm-12 col-md-12 col-lg-12";
     anotherBool = false;
   } else {
     hideAbout();
     anotherBool = true;
-    contactBool = true;
   }
 }
 
@@ -157,15 +160,12 @@ document.getElementById('nav-link-c').addEventListener('click', showContact);
 
 var contactBool = true;
 function showContact(){
+  hideAbout();
   if(contactBool){
-    if(!anotherBool){//hide the about elements when transitioning to contact elements
-      hideAbout();
-    }
     document.getElementById('hiddenC').className = "inner cover col-xs-12 col-sm-12 col-md-12 col-lg-12";
     contactBool = false;
   } else {
     hideContact();
-    anotherBool = true;
     contactBool = true;
   }
 }
