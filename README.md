@@ -5,6 +5,7 @@ Galvanize G27, 2016
 Thanks for taking a look at this project. For my first quarter project at the code bootcamp Galvanize, I wanted to implement a light-hearted concept I'd thought of when I was first learning to code: a website that can generate random strings of hashtags for social media. I want to write code that is easy to read, and that does one thing well, and then add to that in a modular fashion, so starting with a simple AJAX request, and string parsing algorithm, I was able to access a random text API and successfully generate the content I desired, with a few minor corrections to be made later.
 
 -----------Technologies Used ----------
+
 -JavaScript
 -HTML
 -CSS
@@ -15,6 +16,7 @@ The JS, HTML, and CSS were written in Atom on a MacBook Air. The HTML header inc
 I used Node for early validation in the terminal, but once I had my basic HTML and CSS files built up, I did most all of my remaining validation in Chrome over port 8080. This allowed me to test responsiveness and behavior of the page.
 
 ------------Workflow-------------------
+
 -Agile practices
 -Pivotal Tracking
 
@@ -39,6 +41,6 @@ Roy
 
 -------------ScreenShots----------------
 
-![/screenshots/Screen Shot 2016-05-26 at 2.15.45 PM.png](On iPhone)
-![/screenshots/Screen Shot 2016-05-27 at 9.43.44 AM.png](full-screen)
-![/screenshots/Screen Shot 2016-05-27 at 9.45.00 AM.png](in action)
+![screenshots/Screen Shot 2016-05-26 at 2.15.45 PM.png](On iPhone)
+![screenshots/Screen Shot 2016-05-27 at 9.43.44 AM.png](full-screen)
+![screenshots/Screen Shot 2016-05-27 at 9.45.00 AM.png](in action)
