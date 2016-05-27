@@ -35,4 +35,10 @@ Deployed to AWS.
 Thanks for taking the time to gaze upon this little project. If you have suggestions feel free to fork and send me a pull request.
 
 Warm regards,
-Roy 
+Roy
+
+-------------ScreenShots----------------
+
+![/screenshots/Screen Shot 2016-05-26 at 2.15.45 PM.png](On iPhone)
+![/screenshots/Screen Shot 2016-05-27 at 9.43.44 AM.png](full-screen)
+![/screenshots/Screen Shot 2016-05-27 at 9.45.00 AM.png](in action)
