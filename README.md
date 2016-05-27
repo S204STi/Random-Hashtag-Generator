@@ -41,6 +41,6 @@ Roy
 
 -------------ScreenShots----------------
 
-![](./screenshots/Screen Shot 2016-05-26 at 2.15.45 PM.png)
-![](./screenshots/Screen Shot 2016-05-27 at 9.43.44 AM.png)
-![](./screenshots/Screen Shot 2016-05-27 at 9.45.00 AM.png)
+![iPhone](./screenshots/Screen Shot 2016-05-26 at 2.15.45 PM.png)
+![full-screen](./screenshots/Screen Shot 2016-05-27 at 9.43.44 AM.png)
+![In Action](./screenshots/Screen Shot 2016-05-27 at 9.45.00 AM.png)
