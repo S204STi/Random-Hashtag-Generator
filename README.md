@@ -2,6 +2,8 @@ Quarter 1 Front End Project
 Roy Chase
 Galvanize G27, 2016
 
+http://hashtagerator.s3-website-us-west-2.amazonaws.com/
+
 Thanks for taking a look at this project. For my first quarter project at the code bootcamp Galvanize, I wanted to implement a light-hearted concept I'd thought of when I was first learning to code: a website that can generate random strings of hashtags for social media. I want to write code that is easy to read, and that does one thing well, and then add to that in a modular fashion, so starting with a simple AJAX request, and string parsing algorithm, I was able to access a random text API and successfully generate the content I desired, with a few minor corrections to be made later.
 
 -----------Technologies Used ----------
